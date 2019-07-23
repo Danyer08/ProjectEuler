@@ -1,12 +1,33 @@
-﻿using System;
+﻿using ProjectEuler.Problems;
+using System;
+using System.Collections.Generic;
 
 namespace ProjectEuler
 {
     class Program
     {
-        static void Main(string[] args)
+        private static Dictionary<int, Action> _optionsDictionary;
+
+        private static void InitializeDictionary()
         {
-            Console.WriteLine("Hello World!");
+            _optionsDictionary = new Dictionary<int, Action>
+            {
+                {0, Problem0.PrintNumbers },
+                {1, Problem1.SayHello }
+            };
+        }
+
+        static void Main()
+        {
+            InitializeDictionary();
+
+            Console.WriteLine("Select an option");
+
+            int option = Convert.ToInt32(Console.ReadLine());
+
+            _optionsDictionary[option]();
+
+            Console.ReadKey();
         }
     }
 }
