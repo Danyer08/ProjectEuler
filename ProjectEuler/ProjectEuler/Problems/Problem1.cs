@@ -9,7 +9,7 @@ namespace ProjectEuler.Problems
     {
         internal static void SayHello()
         {
-            Console.WriteLine("");
+            Console.WriteLine("Hello");
         }
     }
 }

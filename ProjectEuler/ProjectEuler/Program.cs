@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace ProjectEuler
 {
-    class Program
+    sealed class Program
     {
         private static Dictionary<int, Action> _optionsDictionary;
 
