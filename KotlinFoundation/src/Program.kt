@@ -7,5 +7,6 @@ fun main(args: Array<String>) {
     when (readLine()!!.toInt()) {
         1 -> euler.problem1()
         2 -> euler.problem2()
+        3 -> euler.problem3()
     }
 }

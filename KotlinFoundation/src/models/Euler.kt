@@ -29,4 +29,29 @@ class Euler() {
 
         println("The sum of fibonacci sequence under 400000 is: $counter")
     }
+
+    fun problem3() {
+        var listOfPrimeNumbers: MutableList<Long> = mutableListOf<Long>()
+        var listOfFactors: MutableList<Long> = mutableListOf<Long>()
+        val longZero: Long = 0
+        val longNumber: Long = 600851475143
+        for (number in 2..longNumber) {
+            var isPrime: Boolean = true
+            for (currentNumber in 2..number) {
+                if (number % currentNumber == longZero && number != currentNumber) {
+                    isPrime = false
+                    break
+                }
+            }
+            if (isPrime) {
+                listOfPrimeNumbers.add(number)
+            }
+        }
+        listOfPrimeNumbers.forEach {
+            if (longNumber % it == longZero) {
+                listOfFactors.add(it)
+            }
+        }
+        println("The list of prime factors of $longNumber is: \n $listOfFactors")
+    }
 }
